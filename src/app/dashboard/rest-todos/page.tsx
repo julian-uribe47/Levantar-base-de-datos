@@ -1,10 +1,11 @@
 import prisma from "@/lib/prisma";
-import { TodosGrid } from "@/todos";
+import { NewTodo, TodosGrid } from "@/todos";
+
 
 
 export const metadata = {
- title: 'Listado de TODOS',
- description: 'SEO Title',
+  title: 'Listado de TODOS',
+  description: 'SEO Title',
 };
 
 
@@ -15,6 +16,9 @@ export default async function RestTodosPage() {
 
   return (
     <div>
+      <div className=" py-2 m-4 px-6 w-full">
+        <NewTodo />
+      </div>
       <TodosGrid todos={todos} />
     </div>
   );
