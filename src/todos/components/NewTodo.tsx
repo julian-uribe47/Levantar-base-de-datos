@@ -3,8 +3,10 @@
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
 
-import * as todosApi from '@/todos/interfaces/todos';
+// import * as todosApi from '@/todos/interfaces/todos';
 import { useRouter } from "next/navigation";
+import { addTodo, deleteCompleted } from "../actions/todo-actions";
+
 
 
 
@@ -18,16 +20,15 @@ export const NewTodo = () => {
 
         e.preventDefault();
         if (description.trim().length === 0) return;
-        todosApi.createTodo(description);
+        addTodo(description);
         setDescription('');
-        router.refresh();
         
     }
 
-    const deleteCompleted = async( ) => {
-        await todosApi.deleteCompletedTodos();
-        router.refresh();
-    }
+    // const deleteCompleted = async( ) => {
+    //     // await todosApi.deleteCompletedTodos();
+    //     await deleteTodo
+    // }
 
 
     return (
