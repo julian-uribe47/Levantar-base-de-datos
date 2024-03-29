@@ -20,10 +20,10 @@ export default async function ServerTodosPage() {
   return (
     <>
       <span className=" text-3xl mb-10">Server Actions</span>
-      <div className=" py-2 m-4 px-6 w-full">
+      <div className=" py-2 m-4 px-6 w-full ">
         <NewTodo />
       </div>
-      <TodosGrid todos={todos} />
+      <TodosGrid  todos={todos}  />
     </>
 
   );
