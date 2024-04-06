@@ -34,6 +34,6 @@ export const products: Product[] = [
         name: 'Cybertruck Hoodie',
         price: 45,
         rating: 5,
-        image: '/images/products/1742702-00-A_0_2000.jpg',
+        image: '/images/products/1742702-00-A_0_2000.jpeg',
     },
 ]
